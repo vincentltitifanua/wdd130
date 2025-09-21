@@ -1,139 +1,139 @@
-:root{
-  --body-font: "Segoe UI", Roboto, Arial, sans-serif;
-  --heading-font: Georgia, "Times New Roman", serif;
-  --primary-color: #0b486b;  /* deep teal for headings/text */
-  --accent1-color: #ff7f50;  /* coral for overlays */
-  --accent2-color: #f4f4f4;  /* light background */
+/* ===============================
+   Rafting Site CSS - rafting.css
+   =============================== */
+
+/* 1. CSS Variables (color scheme & fonts) */
+:root {
+  --primary-color: #005f73;
+  --secondary-color: #0a9396;
+  --accent1-color: #94d2bd;
+  --accent2-color: #ee9b00;
+
+  --heading-font: Arial, Helvetica, sans-serif;
+  --body-font: Verdana, Geneva, sans-serif;
 }
 
-/* Reset box model */
-*{
+/* 2. Reset Box Model */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Basic document styles */
-body{
+/* 3. Body Styling */
+body {
   font-family: var(--body-font);
   color: var(--primary-color);
-  background: #ffffff;
+  background-color: #fdfdfd;
   line-height: 1.6;
 }
 
-/* Constrain page width and center */
-header, main, footer{
+/* 4. Layout Width */
+header, main, footer {
   width: 840px;
   margin: 0 auto;
 }
 
-/* Header layout */
-header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-}
-#logo{
-  height: 6px;
-  display: block;
+/* 5. Headings */
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--secondary-color);
+  margin-bottom: 12px;
 }
 
-/* Simple nav */
-nav a{
-  margin-right: 16px;
+/* 6. Navigation */
+nav {
+  background-color: var(--accent1-color);
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 12px;
   text-decoration: none;
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: bold;
 }
 
-/* Basic spacing per assignment */
-nav, p, section, article{
+nav a:hover {
+  color: var(--accent2-color);
+}
+
+/* 7. General Content */
+nav, p, section, article {
   margin: 16px;
   padding: 8px;
 }
 
-/* HERO styles */
-.hero{
-  position: relative; /* required for absolute overlays */
-  margin: 16px;
+/* 8. Hero Section */
+.hero {
+  position: relative;
 }
 
-/* hero image fills width */
-.hero img{
+.hero img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 6px;
 }
 
-/* heading overlay */
-.hero h1{
+/* Hero Heading Overlay */
+.hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.9;
+  opacity: 0.8;
   background-color: var(--accent1-color);
   color: #fff;
-  font-family: var(--heading-font);
+  font-size: 2rem;
 }
 
-/* article overlay inside hero */
-.hero article{
+/* Hero Article Overlay */
+.hero article {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(255,255,255,0.95);
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 12px;
-  max-width: 420px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+}
+
+/* Article Image (floating client photo) */
+.hero article img {
+  float: right;
+  margin: 10px;
+  max-width: 200px;
   border-radius: 6px;
 }
 
-/* small image inside article — unique selector to satisfy requirements */
-.hero article img{
-  float: right;
-  width: 125px;
-  margin-left: 12px;
-  display: block;
+/* 9. Footer */
+footer {
+  background-color: var(--accent1-color);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 4px;
 }
 
-/* clear floats inside article if needed */
-.hero article::after{
-  content: "";
-  display: block;
-  clear: both;
+footer p {
+  margin-bottom: 8px;
 }
 
-/* Footer */
-footer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-top: 1px solid #eee;
-}
-
-/* remove underline from social media image links */
-.socialmedia a{
+footer .socialmedia a {
   text-decoration: none;
-  margin-right: 8px;
+  margin: 0 10px;
 }
-.socialmedia img{
+
+footer .socialmedia img {
   width: 32px;
   height: 32px;
   vertical-align: middle;
 }
-
-/* Small responsive adjustments (optional but helpful) */
-@media (max-width: 900px){
-  header, main, footer{
-    width: 90%;
-  }
-  .hero article{
-    position: static;
-    margin-top: 16px;
-  }
-  .hero h1{ font-size: 1.4rem; }
+header img {
+  width: 120px;  /* adjust size as needed */
+  height: auto;
 }
