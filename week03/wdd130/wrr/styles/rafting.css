@@ -1,0 +1,139 @@
+:root{
+  --body-font: "Segoe UI", Roboto, Arial, sans-serif;
+  --heading-font: Georgia, "Times New Roman", serif;
+  --primary-color: #0b486b;  /* deep teal for headings/text */
+  --accent1-color: #ff7f50;  /* coral for overlays */
+  --accent2-color: #f4f4f4;  /* light background */
+}
+
+/* Reset box model */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic document styles */
+body{
+  font-family: var(--body-font);
+  color: var(--primary-color);
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* Constrain page width and center */
+header, main, footer{
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Header layout */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+#logo{
+  height: 60px;
+  display: block;
+}
+
+/* Simple nav */
+nav a{
+  margin-right: 16px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Basic spacing per assignment */
+nav, p, section, article{
+  margin: 16px;
+  padding: 8px;
+}
+
+/* HERO styles */
+.hero{
+  position: relative; /* required for absolute overlays */
+  margin: 16px;
+}
+
+/* hero image fills width */
+.hero img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* heading overlay */
+.hero h1{
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.9;
+  background-color: var(--accent1-color);
+  color: #fff;
+  font-family: var(--heading-font);
+}
+
+/* article overlay inside hero */
+.hero article{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255,255,255,0.95);
+  padding: 12px;
+  max-width: 420px;
+  border-radius: 6px;
+}
+
+/* small image inside article — unique selector to satisfy requirements */
+.hero article img{
+  float: right;
+  width: 125px;
+  margin-left: 12px;
+  display: block;
+}
+
+/* clear floats inside article if needed */
+.hero article::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+}
+
+/* remove underline from social media image links */
+.socialmedia a{
+  text-decoration: none;
+  margin-right: 8px;
+}
+.socialmedia img{
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+/* Small responsive adjustments (optional but helpful) */
+@media (max-width: 900px){
+  header, main, footer{
+    width: 90%;
+  }
+  .hero article{
+    position: static;
+    margin-top: 16px;
+  }
+  .hero h1{ font-size: 1.4rem; }
+}
