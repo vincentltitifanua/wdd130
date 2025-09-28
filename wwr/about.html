@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>White Water Rafting — About Us</title>
     <meta name="description"
         content="WWR — White water rafting tours: safe guided rapids, family adventures, and training.">
@@ -12,59 +12,96 @@
 </head>
 
 <body>
-    <header>
-        <img src="images/ChatGPT Image Sep 21, 2025, 12_56_15 PM.png" alt="WWR logo" id="logo">
-        <nav>
+    <header class="site-header" role="banner">
+        <img id="logo" src="images/logo.png" alt="White Water Rafting logo">
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html" aria-current="page">About</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <div class="hero">
-            <!-- Hero image: fills the hero div -->
-            <img src="images/l_1156798c_1024.jpg" alt="Rafting on river" width="906" height="250">
+        <section class="hero">
             <h1>White Water Rafting (WWR)</h1>
+            <p class="tagline">Safe, guided river adventures — family friendly and unforgettable.</p>
+            <img src="images/hero.jpg" alt="Rafting on the river" class="hero-img">
+            <div class="hero-content">
+            </div>
+        </section>
 
-            <article>
-                <img src="images/l_1156798l_1024.jpg" alt="Happy client enjoying a raft trip">
+        <section class="intro">
+            <article class="mission">
+                <img src="images/staff.jpg" alt="Happy clients on a raft" class="mission-img">
                 <p>
                     Our mission is to deliver safe, thrilling river experiences for families and paddlers of every
                     level.
                     We focus on safety, training, and unforgettable adventure.
                 </p>
             </article>
-        </div>
+        </section>
 
         <section class="history">
             <h2>History</h2>
-            <p>
-                Founded in 2015 along Fiji’s wild rivers, WWR started as a small local guiding company with a simple
-                goal:
-                to share the beauty and excitement of our islands with adventurers from near and far. What began with a
-                handful of guides and rafts has grown into a trusted outfitter, known for safety, skilled leadership,
-                and
-                a true Fijian spirit of hospitality. Today, WWR carries on the tradition of connecting people to the
-                land,
-                the waters, and the culture of Fiji, creating unforgettable journeys for every visitor.
-            </p>
+            <div class="history-grid">
+                <div class="history-text">
+                    <p>
+                        Founded in 2015 along Fiji’s wild rivers, WWR started as a small local guiding company with a
+                        simple goal:
+                        to share the beauty and excitement of our islands with adventurers from near and far. What began
+                        with a handful
+                        of guides and rafts has grown into a trusted outfitter, known for safety, skilled leadership,
+                        and a true
+                        Fijian spirit of hospitality.
+                    </p>
+                    <p>
+                        Today, WWR carries on the tradition of connecting people to the land, the waters, and the
+                        culture of Fiji,
+                        creating unforgettable journeys for every visitor.
+                    </p>
+                </div>
+                <figure class="history-figure">
+                    <img src="images/staff.jpg" alt="WWR guides and rafts" />
+                    <figcaption>WWR guides and local fleet (est. 2015)</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section class="adventure">
             <h2>Adventure Awaits You!</h2>
-            <p><!-- Intentionally left empty for Week 04 — images will be added later. --></p>
+            <div class="gallery">
+                <figure>
+                    <img src="images/adventure1.jpg" alt="Through the Rapid tides">
+                    <figcaption>Through the Rapid tides</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure2.jpg" alt="Into the Fijian Valley">
+                    <figcaption>Into the Fijian Valley</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure3.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure4.jpg" alt="Family Float">
+                    <figcaption>Family Float</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adventure5.jpg" alt="Expert Run">
+                    <figcaption>Expert Run</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 White Water Rafting — Vincent Lawrence Titifanua</p>
 
-        <nav class="socialmedia">
-            <a href="#" aria-label="Facebook"><img src="images/Facebook_Logo_2023.png" alt="Facebook icon"></a>
-            <a href="#" aria-label="Instagram"><img src="images/images.jpg" alt="Instagram icon"></a>
-            <a href="#" aria-label="YouTube"><img src="images/LinkedIn_logo_initials.png" alt="linkedin icon"></a>
+        <nav class="socialmedia" aria-label="Social links">
+            <a href="#" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#" aria-label="YouTube"><img src="images/linkkedin.png" alt="linkkedin"></a>
         </nav>
     </footer>
 </body>
